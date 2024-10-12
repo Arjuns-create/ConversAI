@@ -13,15 +13,16 @@ In an era characterized by information overload, efficient data processing is cr
 - **Pymupdf**: For handling searchable PDF documents.
 - **BeautifulSoup**: For web scraping and HTML parsing.
 
-With its modular design, ConversAI is not just a tool but a platform that can be extended and customized to fit diverse user requirements. 
+With its modular design, ConversAI is not just a tool but a platform that can be extended and customized to fit diverse user requirements.
 
 ## Features
 
-- **Text Extraction**: Extracts text from searchable and scannable PDFs.
+- **Text Extraction**: Extracts text from both searchable and scannable PDFs.
 - **Web Crawler**: Gathers and processes text from websites efficiently.
 - **YouTube Transcript Retrieval**: Fetches and processes video transcripts for easy querying.
 - **Conversational Interface**: Interactive Gradio UI for seamless user interaction.
 - **Configurable**: Easily customizable to fit specific use cases.
+- **Advanced Document Retrieval**: Utilizes sophisticated algorithms for improved accuracy and relevance.
 
 ## Benefits
 
@@ -40,6 +41,11 @@ Before running ConversAI, ensure you have the following dependencies installed:
 apt-get update && apt-get upgrade -y
 apt-get install poppler-utils -y
 ```
+
+Additionally, you need to set up your environment variables for the GROQ API:
+
+1. Sign up on [Groq](https://www.groq.com) and obtain your API key.
+2. Set the `GROQ_API_KEY` in your environment variables.
 
 ### Installation
 
@@ -121,7 +127,6 @@ ConversAI/
 │   └── settings/               # Configuration files
 │       ├── config.ini
 │       └── params.yaml
-├── secrets.env                 # Environment variables for sensitive data
 └── README.md                   # Project documentation
 ```
 
@@ -129,23 +134,39 @@ ConversAI/
 
 ### Text Input Interface
 
-![Text Input](demos/TextInterface.png)
+![Text Input](https://raw.githubusercontent.com/RauhanAhmed/ConversAI/refs/heads/main/demo/TextInterface.png)
 
 ### PDF Upload Interface
 
-![PDF Upload](demos/PDFInterface.png)
+![PDF Upload](https://raw.githubusercontent.com/RauhanAhmed/ConversAI/refs/heads/main/demo/PDFInterface.png)
 
 ### Web Crawler Interface
 
-![Web Crawler](demos/WebsiteInterface.png)
+![Web Crawler](https://raw.githubusercontent.com/RauhanAhmed/ConversAI/refs/heads/main/demo/WebsiteInterface.png)
 
 ## Conclusion
 
 ConversAI is more than just a tool; it’s a comprehensive solution for managing and extracting insights from a multitude of document formats and web sources. With its powerful capabilities and user-friendly interface, ConversAI is poised to make information retrieval and processing easier and more efficient than ever before.
 
-This project was developed while working as an AI Engineer at [Tech Consulting Partners](https://www.techconsultingpartners.com). I built ConversAI from scratch, implementing much more complex systems and sophisticated tools running behind the scenes to ensure smooth functionality. This open-source prototype serves as a stepping stone towards a more comprehensive project aimed at public good, showcasing the potential of advanced AI in everyday applications. Special thanks to Tech Consulting Partners for entrusting me to work on this initiative and for their invaluable support.
+Sure! Here’s an updated section to include your contributions and acknowledgments:
 
-Feel free to contribute to this open-source project, report issues, or suggest features. Your input is invaluable in enhancing the capabilities of ConversAI! 
+---
+
+## Author Information
+
+- **Email**: rauhaan.siddiqui@gmail.com
+- **Github**: [RauhanAhmed](https://github.com/RauhanAhmed)
+- **LinkedIn**: [Rauhan Ahmed](https://www.linkedin.com/in/rauhan-ahmed)
+- **Twitter**: [@ahmed_rauh46040](https://x.com/ahmed_rauh46040)
+- **Portfolio**: [rauhanahmed.org](https://rauhanahmed.org)
+
+## Acknowledgments
+
+This project was developed while working as an AI Engineer at [Tech Consulting Partners](https://www.techconsultingpartners.com). I built ConversAI from scratch, implementing advanced document retrieval methods, reranking techniques, hybrid search methodologies, multiple integrations with large language models (LLMs), and lots of other complex functionalities. 
+
+The backend includes user management features, sophisticated data storage solutions (including S3 storage management), database management, and vector databases. The deployment strategy leverages robust APIs, Docker containers, CI/CD practices, model monitoring, and cloud platform deployment. 
+
+This open-source prototype serves as a stepping stone towards a more comprehensive project aimed at public good, showcasing the immense potential of advanced AI technologies in everyday applications. I extend my heartfelt gratitude to Tech Consulting Partners for entrusting me with this initiative and for their invaluable support throughout the development process.
 
 ## License
 
