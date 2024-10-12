@@ -25,7 +25,13 @@ class Chain:
         Returns:
             str: Formatted string with documents or a placeholder if empty.
         """
-        context = "\n\n\n".join(docs) or "No Context Found"
+        context = ""
+        for doc in docs:
+            context += f"{doc}\n\n\n"
+        if context == "":
+            context = "No Context Found"
+        else:
+            pass
         return context
 
     def returnChain(self, text: str):
