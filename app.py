@@ -1,13 +1,11 @@
 # Import necessary libraries and modules
 from src.pipelines.completePipeline import Pipeline
 import gradio as gr
-import spaces
 
 # Initialize global variables
 chain = None  # Holds the current processing chain
 pipeline = Pipeline()  # Instantiate the processing pipeline
 
-@spaces.GPU
 def getTextResponse(text: str, inputQuery: str) -> str:
     """
     Generate a response based on the input text and query.
@@ -25,7 +23,6 @@ def getTextResponse(text: str, inputQuery: str) -> str:
     response = chain.invoke({"question": inputQuery})  # Process the query
     return response
 
-@spaces.GPU
 def getSearchablePdfResponse(path: str, inputQuery: str) -> str:
     """
     Generate a response based on a searchable PDF and query.
@@ -43,7 +40,6 @@ def getSearchablePdfResponse(path: str, inputQuery: str) -> str:
     response = chain.invoke({"question": inputQuery})
     return response
 
-@spaces.GPU
 def getScannablePdfResponse(path: str, inputQuery: str) -> str:
     """
     Generate a response based on a scannable PDF and query.
