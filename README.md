@@ -52,7 +52,7 @@ Additionally, you need to set up your environment variables for the GROQ API:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/ConversAI.git
+   git clone https://github.com/rauhanahmed/ConversAI.git
    cd ConversAI
    ```
 
